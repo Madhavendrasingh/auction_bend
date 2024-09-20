@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/auction_backend/auction_backend/auction_backend.iml" filepath="$PROJECT_DIR$/auction_backend/auction_backend/auction_backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/auction_bend.iml" filepath="$PROJECT_DIR$/.idea/auction_bend.iml" />
+    </modules>
+  </component>
+</project>
