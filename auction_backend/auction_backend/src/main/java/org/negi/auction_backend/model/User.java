@@ -11,7 +11,7 @@ public class User {
 
     @Id
     @Column(name = "id", unique = true, nullable = false)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "email", nullable = false, unique = true)
@@ -20,13 +20,9 @@ public class User {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "password", nullable = false)
+    private String password;
 
-    @Column(name = "auction_bids")
-    @JsonIgnore
-    private List<Integer> auction_bids;
-
-    @Column(name = "auctions_owned")
-    private List<Integer> auctions_owned;
 
     public Integer getId() {
         return id;
@@ -54,21 +50,5 @@ public class User {
 
     public String getName() {
         return name;
-    }
-
-    public List<Integer> getAuction_bids() {
-        return auction_bids;
-    }
-
-    public void setAuction_bids(List<Integer> auction_bids) {
-        this.auction_bids = auction_bids;
-    }
-
-    public List<Integer> getAuctions_owned() {
-        return auctions_owned;
-    }
-
-    public void setAuctions_owned(List<Integer> auctions_owned) {
-        this.auctions_owned = auctions_owned;
     }
 }

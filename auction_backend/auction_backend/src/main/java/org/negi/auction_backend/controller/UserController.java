@@ -3,6 +3,7 @@ package org.negi.auction_backend.controller;
 import org.negi.auction_backend.model.User;
 import org.negi.auction_backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,12 +17,13 @@ public class UserController {
         return "Server is running!";
     }
 
-    @GetMapping("/user/{id}")
-    public User getUserById(@PathVariable Integer id){
+    @GetMapping("/user")
+    public User getUserById(@RequestParam Integer id){
+        System.out.println(id);
         return userService.getById(id);
     }
 
-    @GetMapping("/user")
+    @GetMapping("/users")
     public Iterable<User> getAllUsers(){
         return userService.getAll();
     }
