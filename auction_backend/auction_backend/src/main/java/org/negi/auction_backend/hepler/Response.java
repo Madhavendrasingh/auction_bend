@@ -1,4 +1,4 @@
 package org.negi.auction_backend.hepler;
 
-public class response {
+public class Response {
 }

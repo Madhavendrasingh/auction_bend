@@ -3,19 +3,21 @@ package org.negi.auction_backend.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "BID")
+@Table(name = "Bid")
 public class Bid {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Integer id;
 
     @Column
-    private Integer owner;
+    private Integer auction_id;
     @Column
-    private Integer buyer;
+    private Integer bidder;
     @Column
-    private float bid_price;
+    private float bid_value;
+
+    public Bid(){}
 
     public Integer getId() {
         return id;
@@ -25,27 +27,27 @@ public class Bid {
         this.id = id;
     }
 
-    public Integer getOwner() {
-        return owner;
+    public Integer getAuction_id() {
+        return auction_id;
     }
 
-    public void setOwner(Integer owner) {
-        this.owner = owner;
+    public void setAuction_id(Integer auction_id) {
+        this.auction_id = auction_id;
     }
 
-    public Integer getBuyer() {
-        return buyer;
+    public Integer getBidder() {
+        return bidder;
     }
 
-    public void setBuyer(Integer buyer) {
-        this.buyer = buyer;
+    public void setBidder(Integer bidder) {
+        this.bidder = bidder;
     }
 
-    public float getBid_price() {
-        return bid_price;
+    public float getBid_value() {
+        return bid_value;
     }
 
-    public void setBid_price(float bid_price) {
-        this.bid_price = bid_price;
+    public void setBid_value(float bid_value) {
+        this.bid_value = bid_value;
     }
 }

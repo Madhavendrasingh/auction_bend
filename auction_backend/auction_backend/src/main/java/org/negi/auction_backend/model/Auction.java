@@ -8,8 +8,8 @@ import org.negi.auction_backend.constants.Auction.Status;
 @Table(name = "Auction")
 public class Auction {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", unique = true)
     private Integer id;
 
     @Column(name = "item_name", nullable = false)
